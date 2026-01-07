@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    
     stages {
         stage('Build') {
             steps {
@@ -8,17 +7,10 @@ pipeline {
                 bat 'python hello.py'
             }
         }
-        
         stage('Test') {
             steps {
                 echo 'Testing...'
                 bat 'python hello.py'
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
             }
         }
     }
